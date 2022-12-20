@@ -11,6 +11,9 @@ public class CurrentAccount extends Account{
         FEE = fee;
     }
 
+    public CurrentAccount(int accountNumber, double fee) {
+    }
+
     // Method to deposit fees
 
     public void deposit(double amount, double FEE) {

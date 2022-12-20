@@ -10,6 +10,9 @@ public class SavingsAccount extends Account {
         this.interestRate = interestRate;
     }
 
+    public SavingsAccount(int accountNumber, double ir) {
+    }
+
     @Override
     public int getAccountNumber() {
         return accountNumber;
