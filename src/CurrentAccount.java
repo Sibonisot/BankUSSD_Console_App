@@ -35,7 +35,7 @@ public class CurrentAccount extends Account{
         }
     }
 
-    public void withdraw(double amount, double FEE) {
+    public void sendCash (double amount, double FEE) {
         // Check amount
         if(amount > 0){
             if ((amount + FEE ) <= balance ){
