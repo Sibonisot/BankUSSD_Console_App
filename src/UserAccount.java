@@ -5,6 +5,7 @@ import java.nio.file.Paths;
 import java.security.spec.RSAOtherPrimeInfo;
 import java.util.Scanner;
 
+import static java.awt.SystemColor.menu;
 import static java.nio.file.StandardOpenOption.APPEND;
 
 public class UserAccount {
@@ -68,9 +69,9 @@ public class UserAccount {
                 System.out.println("Access denied! Invalid username or Password");
             }
             reader.close();;
-            System.out.println("Press any key to continue...");
-            String proc = scanner.nextLine();
-            new UserAccount();
+            //System.out.println("Press any key to continue...");
+            //String proc = scanner.nextLine();
+            //new UserAccount();
         }catch (Exception ex){
             System.out.print(ex.getMessage());
         }

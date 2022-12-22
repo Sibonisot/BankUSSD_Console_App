@@ -1,11 +1,31 @@
+import java.util.Scanner;
+
 public abstract class Account {
 
     private int accountNumber;
     private  String accountName;
-    protected double balance;
+    public static double balance = 10000;
 
-    public Account(){
+    public Account() {
 
+
+    }
+
+    public static int accountMenu() {
+
+        int selection;
+        Scanner input = new Scanner(System.in);
+
+        /***************************************************/
+
+        System.out.println("Select account");
+        System.out.println("========================\n");
+        System.out.println("1. Current Account");
+        System.out.println("2. Savings Account");
+        System.out.println("4 - Quit");
+
+        selection = input.nextInt();
+        return selection;
     }
 
     public Account(int accountNumber, String accountName, double balance){

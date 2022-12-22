@@ -1,6 +1,6 @@
 public class SavingsAccount extends Account {
     private int accountNumber;
-    private double interestRate;
+    protected double interestRate;
 
     public SavingsAccount() {
     }
@@ -31,19 +31,19 @@ public class SavingsAccount extends Account {
         this.interestRate = interestRate;
     }
 
-    public double calcInterestRate(){
+    public double calcInterestRate(double balance){
         return balance * interestRate;
     }
 
-    public void applyInterest(){
-        double interest = calcInterestRate();
+    public void applyInterest(double balance){
+        double interest = calcInterestRate(balance);
         System.out.printf("Interest amount %.2f added to balance%n", balance);
         deposit(interest);
     }
 
     // Method to deposit fees
 
-    public void deposit(double amount, double FEE) {
+    public void deposit(double amount, double FEE, double balance) {
 
         // Check amount
 
@@ -57,7 +57,7 @@ public class SavingsAccount extends Account {
         }
     }
 
-    public void withdraw(double amount, double FEE) {
+    public void withdraw(double amount, double FEE, double balance) {
         // Check amount
         if(amount > 0){
             if ((amount) <= balance ){
